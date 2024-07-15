@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+HEAD
 "# EcomPulse" 
-=======
+
 # EcomPulse
->>>>>>> origin/main
+origin/main
 "# EcomPulse" 
 "# EcomPulse" 
