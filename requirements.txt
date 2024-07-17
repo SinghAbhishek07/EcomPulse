@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 streamlit
 pandas
 numpy
@@ -7,8 +6,3 @@ altair
 plotly
 scikit-learn
 pillow
-=======
-streamlit
-boto3
-pandas
->>>>>>> 1be3bdd9882a86393431650049df8368db5099a5
