@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 [server]
 headless = true
 port = 8090
+=======
+[server]
+headless = true
+port = 8090
+>>>>>>> 1be3bdd9882a86393431650049df8368db5099a5
 enableCORS = false
