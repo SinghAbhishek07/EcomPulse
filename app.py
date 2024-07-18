@@ -98,7 +98,6 @@ colors = {
     'text': '#000000'
 }
 
-
 # Creating plot of vendor statistics
 def plot_vendor_statistics(merged_df):
     vendor_stats = merged_df.groupby("VendorName").agg(
@@ -458,7 +457,7 @@ elif page == "Graphs":
                     - The x-axis represents the customer review score, and the y-axis represents the number of feedbacks.
                     - Each bubble represents a vendor, distinguished by unique colors.
                     - The size of the bubble indicates the shipping cost for that vendor.
-                    - **ElectroBuddy and MantaElectronics:**
+                    - **ElectroBuddy and GadgetUniverse:**
                         - High customer review scores and a large number of feedbacks.
                         - Indicate strong performance and high customer satisfaction.
                     - **Innovatech:**
@@ -486,10 +485,10 @@ elif page == "Graphs":
                     st.write("""
                     - The plot shows the distribution of sale prices across different stock statuses for each category (Electronics, Accessories, Office Supplies).
                     - **Electronics:**
-                        - The median sale price for 'In Stock' electronics is higher than for 'Out of Stock' and 'Low Stock' items.
+                        - The median sale price for 'Low Stock' electronics is higher than for 'Out of Stock' and 'In Stock' items.
                         - There is a significant price range, with prices for 'In Stock' items being the most varied.
                     - **Accessories:**
-                        - The sale prices for 'In Stock' accessories are slightly higher than for 'Low Stock' and 'Out of Stock' items.
+                        - The median sale prices for 'In Stock' accessories are slightly higher than for 'Low Stock' and 'Out of Stock' items.
                         - The price range for accessories is narrower compared to electronics.
                     - **Office Supplies:**
                         - The median sale price for 'In Stock' office supplies is also higher compared to 'Low Stock' and 'Out of Stock' items.
@@ -509,21 +508,21 @@ elif page == "Graphs":
                         - 'In Stock' items have the highest median sale price, with 'Low Stock' items having a slightly lower median price.
                         - 'Out of Stock' items have a lower median price, with a narrower price range.
                     - **GadgetUniverse:**
-                        - 'In Stock' items have the highest median sale price, with 'Out of Stock' items having the lowest median price.
+                        - 'Low Stock' items have the highest median sale price, with 'In Stock' items having the lowest median price.
                         - The price range for 'In Stock' items is wide, indicating varied pricing.
                     - **TechGiant:**
                         - The sale prices are consistent across different stock statuses.
                         - 'In Stock' items have a higher median price compared to 'Out of Stock' and 'Low Stock' items.
                     - **TechSphere:**
-                        - Similar to other vendors, 'In Stock' items have the highest median sale price.
-                        - 'Out of Stock' items have the lowest median price, with a narrower price range.
+                        - 'Low Stock' items have the highest median sale price, with 'In Stock' items having the lowest median price.
+                        - 'In Stock' items have the lowest median price, with a narrower price range.
                     - **ElectroBuddy:**
-                        - 'In Stock' items have the highest median sale price, with 'Low Stock' and 'Out of Stock' items having lower median prices.
+                        - 'Low Stock' items have the highest median sale price, with 'In Stock' and 'Out of Stock' items having lower median prices.
                         - The price range for 'In Stock' items is wide, indicating varied pricing.
                     - **Innovatech:**
                         - 'In Stock' items have the highest median sale price, with 'Out of Stock' items having the lowest median price.
                         - The price range for 'In Stock' items is wide, indicating varied pricing.
-                    - Overall, 'In Stock' items tend to have higher median sale prices across all vendors, indicating that availability positively impacts pricing. The variability in prices is noticeable for vendors like GadgetUniverse, TechSphere, and Innovatech, while others like ElectroWorld and TechGiant have more consistent pricing across stock statuses.
+                    - Overall, 'In Stock' and 'Low Stock' items tend to have higher median sale prices across all vendors, indicating that availability positively impacts pricing. The variability in prices is noticeable for vendors like GadgetUniverse, TechSphere, and Innovatech, while others like ElectroWorld and TechGiant have more consistent pricing across stock statuses.
                     """)
             elif selection == "Cluster Insights":
                 col1, col2 = st.columns(2)
@@ -558,7 +557,6 @@ elif page == "Graphs":
 
         # Displaying the selected plot
         display_selected_plot(plot_selection)
-
 
 
 # Data and Architecture page
