@@ -23,6 +23,9 @@ alt.themes.enable("dark")
 st.sidebar.markdown(
     """
     <style>
+    .sidebar .sidebar-content {
+        background-color: #8ABAE8; 
+    }
     .sidebar-title {
         font-size: 50px;
         font-weight: bold;
