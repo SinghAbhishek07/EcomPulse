@@ -566,7 +566,7 @@ elif page == "Architecture & Data":
     st.title("EcomPulse Architecture")
 
     try:
-        img = Image.open("Architecture-diagram.png")
+        img = Image.open("figs/Architecture-diagram.png")
         st.image(img, caption="EcomPulse Dashboard Architecture", use_column_width=True)
     except FileNotFoundError:
         st.error("Architecture image not found. Please check the path.")
