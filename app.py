@@ -355,6 +355,10 @@ kmeans = KMeans(n_clusters=3, init='k-means++', max_iter=300, n_init=10, random_
 standardized_vendor_df['Cluster'] = kmeans.fit_predict(standardized_vendor_df[['Shipping Cost', 'Customer Review Score', 'Number of Feedbacks']])
 
 
+clustered_df = vendor_df.copy()
+clustered_df['Cluster'] = standardized_vendor_df['Cluster']
+clustered_df.sort_values(by='Cluster').reset_index(drop=True)
+
 # Creating plot for cluster analysis
 def plot_vendor_clusters_3d(vendor_df):
   
@@ -566,11 +570,21 @@ elif page == "Graphs":
 elif page == "Architecture & Data":
     st.title("EcomPulse Architecture")
 
+    # Display Technique 1
+    st.header("Technique 1")
     try:
-        img = Image.open("figs/Architecture-diagram.png")
-        st.image(img, caption="EcomPulse Dashboard Architecture", use_column_width=True)
+        img1 = Image.open("figs/Architecture-diagram.png")
+        st.image(img1, caption="EcomPulse Architecture", use_column_width=True)
     except FileNotFoundError:
         st.error("Architecture image not found. Please check the path.")
+
+    # Display Technique 2
+    st.header("Technique 2")
+    try:
+        img2 = Image.open("figs/technique2.png")  # Update with the correct filename for Technique 2
+        st.image(img2, caption="AWS_SnowFlake_Streamlit_Architecture", use_column_width=True)
+    except FileNotFoundError:
+        st.error("Technique 2 image not found. Please check the path.")
 
     st.header("Dataframes")
 
@@ -580,7 +594,7 @@ elif page == "Architecture & Data":
         "Merged": merged_df,
         "Product_Data": product_data,
         "Encoded_Product": encoded_product_df,
-        "Standardized_Vendor": standardized_vendor_df
+        "Cluster_df": clustered_df
     }
 
     df_names = list(dataframes.keys())
